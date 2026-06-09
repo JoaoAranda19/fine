@@ -13,7 +13,7 @@
 
     <header class="header-main">
         <div class="header-main__brand">
-            EnterpriseBlue
+            fine
         </div>
         <nav class="header-navigation">
             <ul class="header-navigation__list">
