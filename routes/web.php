@@ -14,6 +14,11 @@ use App\Http\Controllers\ReportsController;
 Route::get('/', [HomeController::class, 'homepage'])->name('homepage');
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
+Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
+Route::get('/product/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit');
+Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
+Route::post('/product/update/{id}', [ProductsController::class, 'update'])->name('products.update');
+
 
 Route::get('/companies', [CompaniesController::class, 'index'])->name('companies.index');
 
