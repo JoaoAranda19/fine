@@ -51,27 +51,3 @@ Gerencie os produtos de seu inventário
 
 @section('floating-buttons')
 @endsection
-
-<style>
-.app-shell__list{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.app-shell__list-item{
-    color: var(--color-text-main)
-    padding: 0.2rem;
-    border-bottom: 1px solid rgb(0 0 100 / 0.2);
-}
-
-.app-shell__list-item span{
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-.app-shell__list-item:hover{
-    color: var(--color-text-muted);
-}
-</style>

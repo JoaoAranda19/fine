@@ -33,6 +33,8 @@ body {
     --color-white: #FFFFFF;
     --color-text-main: #1E293B;
     --color-text-muted: #64748B;
+    --color-cancel-gray: #7C7C7D;
+    --color-hover-gray: #8C8C8C;
 
     --radius-block: 1.2rem;
     --radius-button: 0.6rem;
@@ -129,6 +131,35 @@ body {
     gap: 2.4rem;
 }
 
+.app-shell__list{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.app-shell__list-item{
+    color: var(--color-text-main)
+    padding: 0.2rem;
+    border-bottom: 1px solid rgb(0 0 100 / 0.2);
+}
+
+.app-shell__list-item span{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.app-shell__list-item:hover{
+    color: var(--color-text-muted);
+}
+
+.app-shell__lower-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
 /* ==========================================================================
    Action Buttons
    ========================================================================== */
@@ -161,6 +192,14 @@ body {
     background-color: var(--color-light-blue);
 }
 
+.action-button--cancel{
+    background-color: var(--color-cancel-gray);
+    color: var(--color-white);
+}
+
+.action-button--cancel:hover {
+    background-color: var(--color-hover-gray);
+}
 /* ==========================================================================
    Floating Mass-Edit Component
    ========================================================================== */
@@ -205,4 +244,40 @@ body {
 
 .floating-mass__btn--secondary:hover {
     background-color: var(--color-light-blue);
+}
+
+/* ==========================================================================
+   Form style rules
+   ========================================================================== */
+
+.form__hidden{
+    display: none;
+}
+
+.form__input-field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.form__label{
+    color: var(--color-text-muted);
+    font-weight: 600;
+
+    }
+
+.form__text-input{
+   /*border: 2px solid #E1EFFE;*/
+   border: 2px solid;
+   border-color: var(--color-light-blue);
+   border-radius: 5px;
+   padding: 0.75rem;
+    }
+
+.form__text-input:hover{
+        border-color: var(--color-hover-blue);
+    }
+
+.form__error-span{
+    color: red;
 }

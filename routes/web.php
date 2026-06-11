@@ -19,6 +19,7 @@ Route::get('/product/edit/{id}', [ProductsController::class, 'edit'])->name('pro
 Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
 Route::post('/product/update/{id}', [ProductsController::class, 'update'])->name('products.update');
 
+Route::get('/categories/create', [categoriesController::class, 'create'])->name('categories.create');
 
 Route::get('/companies', [CompaniesController::class, 'index'])->name('companies.index');
 

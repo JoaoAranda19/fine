@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('page-title')</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -33,6 +32,9 @@
 
         <section class="app-shell__workspace">
             @yield('app-shell-workspace')
+        </section>
+        <section class="app-shell__lower-actions">
+            @yield('app-shell-lower-actions')
         </section>
     </main>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Product;
+use App\Models\Category;
 
 class ProductsController extends Controller
 {
@@ -19,7 +20,8 @@ class ProductsController extends Controller
     }
 
     public function create(){
-        dd('to be implemented');
+        $categories = Category::all();
+        return view('products.desktop.create', compact('categories'));
     }
 
     public function edit(int $product_id){
