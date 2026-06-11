@@ -82,7 +82,7 @@ Gerencie os produtos de seu inventário
         @csrf
         @method('POST')
         <input id="sub-input-product-name" type="text" name="product-name"/>
-        <input id="sub-input-product-cost" type="text" name="product cost"/>
+        <input id="sub-input-product-cost" type="text" name="product-cost"/>
         <input id="sub-input-product-category" type="text" name="product-category"/>
     </form>
 </div>

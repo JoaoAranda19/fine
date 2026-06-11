@@ -35,6 +35,8 @@ body {
     --color-text-muted: #64748B;
     --color-cancel-gray: #7C7C7D;
     --color-hover-gray: #8C8C8C;
+    --color-error-red: #D32F2F;
+    --color-hover-red: #B72727;
 
     --radius-block: 1.2rem;
     --radius-button: 0.6rem;
@@ -92,6 +94,21 @@ body {
 }
 
 /* ==========================================================================
+   Status Bar
+   ========================================================================== */
+
+.status-bar__error{
+    background-color: var(--color-error-red);
+    color: white;
+    padding: 1rem;
+}
+
+.status-bar__error li {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
    App Shell Component
    ========================================================================== */
 .app-shell {
@@ -127,7 +144,7 @@ body {
     box-shadow: var(--shadow-soft);
     min-height: 50vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     gap: 2.4rem;
 }
 
@@ -200,6 +217,16 @@ body {
 .action-button--cancel:hover {
     background-color: var(--color-hover-gray);
 }
+
+.action-button--delete{
+    background-color: var(--color-error-red);
+    color: var(--color-white);
+}
+
+.action-button--delete:hover {
+    background-color: var(--color-hover-red);
+}
+
 /* ==========================================================================
    Floating Mass-Edit Component
    ========================================================================== */
@@ -280,4 +307,57 @@ body {
 
 .form__error-span{
     color: red;
+}
+
+/* ==========================================================================
+   Modals and dialogs
+   ========================================================================== */
+
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal[aria-hidden="true"] {
+    display: none;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal form {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 28rem;
+}
+
+.modal__actions-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal__warning-header{
+    color: red;
+    font-weight: 600;
+}
+.modal__warning-body{
+    color: darkgrey;
+    margin-bottom: 1rem;
+}
+
+.dialog__dialog{
+    margin: auto;
+    padding: 2rem;
+    border-radius: 5px;
 }

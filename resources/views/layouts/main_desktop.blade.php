@@ -19,6 +19,18 @@
         </nav>
     </header>
 
+    @if($errors->any())
+        <div class="status-bar__error">
+            <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <x-status-message/>
+
     <main class="app-shell">
         <header class="app-shell__header">
             <div>
